@@ -1,0 +1,33 @@
+:root{
+  --primary:#004080;   /* azul confianza */
+  --accent:#0099CC;    /* celeste frescura */
+  --light:#F5F5F5;     /* gris claro */
+  --dark:#0c1b2a;      /* azul muy oscuro */
+}
+
+body{
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+h1,h2,h3,.navbar-brand{
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+.text-primary{ color: var(--primary) !important; }
+.btn-primary{
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline-primary{
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline-primary:hover{
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Hero */
+.bg-hero{
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+}
