@@ -181,24 +181,52 @@
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="py-5">
-    <div class="container">
-      <h2 class="h3 fw-bold mb-3">Contacto</h2>
-      <p>Escribinos a <a href="mailto:coldtec@gmail.com">coldtec@gmail.com</a> o por WhatsApp.</p>
-      <!-- El formulario real lo agregamos luego con Formspree -->
-    </div>
-  </section>
+<section id="contacto" class="py-5">
+  <div class="container">
+    <h2 class="h3 fw-bold mb-3">Contacto</h2>
+    <p>Escribinos a <a href="mailto:coldtec@gmail.com">coldtec.contacto@gmail.com</a> o por WhatsApp.</p>
 
-  <!-- Footer -->
-  <footer class="py-4 border-top">
-    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center gap-2">
-      <div class="small text-muted">© <span id="year"></span> Coldtec. Todos los derechos reservados.</div>
-      <div class="d-flex gap-3">
-        <a class="text-decoration-none" href="mailto:coldtec@gmail.com"><i class="bi bi-envelope"></i> Gmail</a>
-        <a class="text-decoration-none" href="https://wa.me/"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+    <form action="https://formspree.io/f/myzpqjby" method="POST" class="row g-3" netlify="false">
+      <!-- Honeypot antispam: campo oculto que los bots suelen completar -->
+      <div style="display:none;">
+        <label>Dejar en blanco si sos humano
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </label>
       </div>
-    </div>
-  </footer>
+
+      <div class="col-md-6">
+        <label class="form-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" required />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Teléfono</label>
+        <input type="tel" name="telefono" class="form-control" placeholder="+598 9xxxxxxx" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Empresa</label>
+        <input type="text" name="empresa" class="form-control" />
+      </div>
+      <div class="col-12">
+        <label class="form-label">Mensaje</label>
+        <textarea name="mensaje" rows="4" class="form-control" required></textarea>
+      </div>
+
+      <!-- Opcionales útiles -->
+      <input type="hidden" name="_subject" value="Nuevo contacto desde Coldtec" />
+      <input type="hidden" name="_language" value="es" />
+      <input type="hidden" name="_redirect" value="https://renzodonagrandi.github.io/coldtec-web/gracias.html" />
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+</section>
+
 
   <!-- Bootstrap JS (bundle) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
